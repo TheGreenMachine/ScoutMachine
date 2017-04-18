@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="android.greenmachine.otih_oith.com.scoutmachine.Driver_Rating">
+
+    <TextView
+        android:id="@+id/textViewDriver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Driver Performace Rating"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="9dp"
+        android:layout_marginTop="14dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/radioButtonRate"
+        android:layout_toEndOf="@+id/radioButtonRate" />
+
+    <RadioGroup
+        android:id="@+id/radioButtonRate"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+      >
+
+    </RadioGroup>
+    <TextView
+        android:id="@+id/textViewPilot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pilot"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="100dp"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/radioButtonRate1"
+        android:layout_toRightOf="@+id/radioButtonRate"
+        android:layout_toEndOf="@+id/radioButtonRate" />
+
+
+    <RadioGroup
+        android:id="@+id/radioButtonP"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/textViewPilot"
+        android:layout_toRightOf="@+id/radioButtonRate"
+        android:layout_toEndOf="@+id/radioButtonRate"
+        android:layout_marginTop="76dp">
+
+    </RadioGroup>
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textViewDriver"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/textViewDriver"
+        android:layout_marginBottom="24dp"
+        android:onClick="copyDBToSDCard"
+        android:text="Save/Export"
+        tools:layout_editor_absoluteX="249dp"
+        tools:layout_editor_absoluteY="521dp" />
+
+    <Button
+        android:id="@+id/buttonBegining"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="lastPart"
+        android:text="New Entry/Begining"
+        android:layout_above="@+id/buttonSave"
+        android:layout_alignRight="@+id/buttonSave"
+        android:layout_alignEnd="@+id/buttonSave"
+        android:layout_marginBottom="126dp" />
+
+    <RadioButton
+        android:id="@+id/radioButtonRating3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="RadioButtonClicked"
+        android:text="3"
+        tools:layout_editor_absoluteX="178dp"
+        tools:layout_editor_absoluteY="49dp"
+        android:layout_marginTop="21dp"
+        android:layout_below="@+id/textViewDriver"
+        android:layout_centerHorizontal="true" />
+
+    <RadioButton
+    android:id="@+id/radioButtonRating4"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+        android:layout_marginLeft="17dp"
+    android:layout_marginStart="17dp"
+        android:onClick="RadioButtonClicked"
+        android:text="4"
+        tools:layout_editor_absoluteX="259dp"
+        tools:layout_editor_absoluteY="49dp"
+        android:layout_alignBaseline="@+id/radioButtonRating3"
+        android:layout_alignBottom="@+id/radioButtonRating3"
+        android:layout_alignLeft="@+id/buttonSave"
+        android:layout_alignStart="@+id/buttonSave" />
+
+    <RadioButton
+    android:id="@+id/radioButtonRate5"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBaseline="@+id/radioButtonRating4"
+    android:layout_alignBottom="@+id/radioButtonRating4"
+    android:layout_alignEnd="@+id/textViewDriver"
+    android:layout_alignRight="@+id/textViewDriver"
+        android:onClick="RadioButtonClicked"
+        android:text="5"
+        tools:layout_editor_absoluteX="337dp"
+        tools:layout_editor_absoluteY="49dp" />
+
+    <RadioButton
+        android:id="@+id/radioButtonRate2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="RadioButtonClicked"
+        android:text="2"
+        tools:layout_editor_absoluteX="98dp"
+        tools:layout_editor_absoluteY="49dp"
+        android:layout_alignBaseline="@+id/radioButtonRating3"
+        android:layout_alignBottom="@+id/radioButtonRating3"
+        android:layout_toLeftOf="@+id/radioButtonRating3"
+        android:layout_toStartOf="@+id/radioButtonRating3"
+        android:layout_marginRight="36dp"
+        android:layout_marginEnd="36dp" />
+
+    <RadioButton
+        android:id="@+id/radioButtonRate1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="RadioButtonClicked"
+        android:text="1"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="49dp"
+        android:layout_alignBaseline="@+id/radioButtonRate2"
+        android:layout_alignBottom="@+id/radioButtonRate2"
+        android:layout_alignRight="@+id/radioButtonP"
+        android:layout_alignEnd="@+id/radioButtonP" />
+
+    <RadioButton
+        android:id="@+id/radioButtonP1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="RadioButtonClickedPilot"
+        android:text="1"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="148dp"
+        android:layout_alignBaseline="@+id/radioButtoP2"
+        android:layout_alignBottom="@+id/radioButtoP2"
+        android:layout_toRightOf="@+id/radioButtonRate"
+        android:layout_toEndOf="@+id/radioButtonRate" />
+
+    <RadioButton
+    android:id="@+id/radioButtoP2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignLeft="@+id/radioButtonRate2"
+    android:layout_alignStart="@+id/radioButtonRate2"
+    android:layout_below="@+id/textViewPilot"
+    android:layout_marginTop="64dp"
+        android:onClick="RadioButtonClickedPilot"
+        android:text="2"
+        tools:layout_editor_absoluteX="98dp"
+        tools:layout_editor_absoluteY="148dp" />
+
+    <RadioButton
+    android:id="@+id/radioButtonP3"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBaseline="@+id/radioButtoP2"
+    android:layout_alignBottom="@+id/radioButtoP2"
+    android:layout_alignLeft="@+id/radioButtonRating3"
+    android:layout_alignStart="@+id/radioButtonRating3"
+        android:onClick="RadioButtonClickedPilot"
+        android:text="3"
+        tools:layout_editor_absoluteX="178dp"
+        tools:layout_editor_absoluteY="148dp" />
+
+    <RadioButton
+    android:id="@+id/radioButtonP4"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBaseline="@+id/radioButtonP3"
+    android:layout_alignBottom="@+id/radioButtonP3"
+    android:layout_alignLeft="@+id/radioButtonRating4"
+    android:layout_alignStart="@+id/radioButtonRating4"
+        android:onClick="RadioButtonClickedPilot"
+        android:text="4"
+        tools:layout_editor_absoluteX="259dp"
+        tools:layout_editor_absoluteY="148dp" />
+
+    <RadioButton
+    android:id="@+id/radioButtonP5"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBaseline="@+id/radioButtonP4"
+    android:layout_alignBottom="@+id/radioButtonP4"
+    android:layout_alignEnd="@+id/buttonBegining"
+    android:layout_alignRight="@+id/buttonBegining"
+        android:onClick="RadioButtonClickedPilot"
+        android:text="5"
+        tools:layout_editor_absoluteX="337dp"
+        tools:layout_editor_absoluteY="148dp" />
+
+
+</RelativeLayout>
